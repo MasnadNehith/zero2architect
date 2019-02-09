@@ -1,7 +1,7 @@
 
 const http = require('http');
 const port = 3000;
-const hostname = "aws host name";
+const hostname = process.env.dns_name;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
