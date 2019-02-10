@@ -1,6 +1,6 @@
 
 const http = require('http');
-const port = 3000;
+const port = 80;
 const hostname = process.env.dns_name;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
