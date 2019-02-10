@@ -18,6 +18,10 @@ npm install -y
 dnsaddress=$(curl -s http://169.254.169.254/latest/meta-data/public-hostname)
 export dns_name=${dnsaddress}
 
-node server.js
+npm install forever -g
+
+sudo -u ec2-user /usr/lib/node_modules/forever/bin/forever start /home/ec2-user/zero2architect/one_user/server.js
+
+
 
 
